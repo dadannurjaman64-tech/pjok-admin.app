@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Ajar - SD NEGERI UTAMA</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/config.js"></script>
+</head>
+<body class="bg-slate-100 font-sans">
+    <div class="flex min-h-screen">
+        <!-- Sidebar Navigation -->
+        <aside class="w-64 bg-slate-900 text-white flex flex-col justify-between p-4">
+            <div>
+                <h1 class="text-xl font-bold mb-8 text-center border-b border-slate-700 pb-4">SD NEGERI UTAMA</h1>
+                <nav class="space-y-2">
+                    <a href="/dashboard" class="block py-2.5 px-4 rounded hover:bg-slate-800 transition">Dashboard</a>
+                    <a href="/students" class="block py-2.5 px-4 rounded hover:bg-slate-800 transition">Data Siswa</a>
+                    <a href="/classes" class="block py-2.5 px-4 rounded hover:bg-slate-800 transition">Manajemen Kelas</a>
+                    <a href="/attendance" class="block py-2.5 px-4 rounded hover:bg-slate-800 transition">Absensi Harian</a>
+                    <a href="/modules" class="block py-2.5 px-4 rounded bg-blue-600 font-semibold">Modul Ajar</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-slate-800">Modul Ajar PJOK</h2>
+                <button onclick="window.history.back()" class="bg-slate-600 text-white px-4 py-2 rounded-lg hover:bg-slate-700">Kembali</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-slate-600">Daftar Modul Pembelajaran PJOK Sekolah Dasar siap diunggah dan dikelola melalui halaman ini.</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
