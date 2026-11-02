@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Administrasi Sekolah Dasar</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1E3A8A">
+  <style>
+    .hero-box { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem; background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%); color: white; }
+    .btn-login { background: #10B981; color: white; padding: 0.85rem 2rem; font-weight: 700; text-decoration: none; border-radius: var(--radius-md); margin-top: 1.5rem; display: inline-block; }
+  </style>
+</head>
+<body>
+  <div class="hero-box">
+    <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">Sistem Informasi Administrasi & Pembelajaran SD</h1>
+    <p style="max-width: 600px; color: #DBEAFE; line-height: 1.6;">Solusi terpadu pengelolaan Data Siswa, Kelas, Absensi, Penilaian, Modul Ajar, CP/TP/ATP, PROTA, PROMES, dan Integrasi Google Sheets.</p>
+    <a href="login.html" class="btn-login">🔑 Masuk ke Sistem (Login)</a>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(err => console.error('SW Error:', err));
+      });
+    }
+  </script>
+</body>
+</html>

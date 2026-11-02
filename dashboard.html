@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Administrasi SD</title>
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="app-wrapper">
+        <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-header">SD NEGERI UTAMA</div>
+      <ul class="sidebar-menu">
+        <li class="menu-item"><a href="dashboard.html" class="menu-link active"><span>📊</span> Dashboard</a></li><li class="menu-item"><a href="students.html" class="menu-link"><span>👨‍🎓</span> Data Siswa</a></li><li class="menu-item"><a href="classes.html" class="menu-link"><span>🏫</span> Manajemen Kelas</a></li><li class="menu-item"><a href="attendance.html" class="menu-link"><span>📅</span> Absensi Harian</a></li><li class="menu-item"><a href="grades.html" class="menu-link"><span>📝</span> Daftar Nilai</a></li><li class="menu-item"><a href="modules.html" class="menu-link"><span>📚</span> Modul Ajar</a></li><li class="menu-item"><a href="cp_tp_atp.html" class="menu-link"><span>🎯</span> CP, TP, & ATP</a></li><li class="menu-item"><a href="prota_promes.html" class="menu-link"><span>🗓️</span> PROTA & PROMES</a></li><li class="menu-item"><a href="google_sheets.html" class="menu-link"><span>🔄</span> Integrasi Google Sheets</a></li><li class="menu-item"><a href="reports.html" class="menu-link"><span>📥</span> Laporan & Unduh</a></li><li class="menu-item"><a href="test_runner.html" class="menu-link"><span>🧪</span> Uji Aplikasi</a></li>
+      </ul>
+    </aside>
+    <main class="app-main">
+      <header class="app-header">
+        <button class="btn" onclick="document.getElementById('appSidebar').classList.toggle('open')">☰</button>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <div style="text-align: right;">
+            <div id="userDisplayName" style="font-weight: 700; font-size: 0.9rem;">Memuat...</div>
+            <span id="userRoleBadge" class="badge badge-success">GURU</span>
+          </div>
+          <button class="btn btn-danger" onclick="handleLogout()">Keluar</button>
+        </div>
+      </header>
+      <div class="content-container">
+        <h2 style="color: var(--color-navy); margin-bottom: 1.5rem;">Dashboard Statistik Sekolah</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+          <div class="stat-card">
+            <div style="font-size: 0.85rem; color: var(--color-text-muted);">Total Siswa</div>
+            <div id="statTotalStudents" style="font-size: 1.8rem; font-weight: 800; color: var(--color-navy); margin-top: 0.5rem;">-</div>
+          </div>
+          <div class="stat-card">
+            <div style="font-size: 0.85rem; color: var(--color-text-muted);">Total Kelas/Rombel</div>
+            <div id="statTotalClasses" style="font-size: 1.8rem; font-weight: 800; color: var(--color-navy); margin-top: 0.5rem;">-</div>
+          </div>
+          <div class="stat-card">
+            <div style="font-size: 0.85rem; color: var(--color-text-muted);">Kehadiran Hari Ini</div>
+            <div id="statAttendanceRate" style="font-size: 1.8rem; font-weight: 800; color: var(--color-success); margin-top: 0.5rem;">-%</div>
+          </div>
+          <div class="stat-card">
+            <div style="font-size: 0.85rem; color: var(--color-text-muted);">Modul Pembelajaran</div>
+            <div id="statTotalModules" style="font-size: 1.8rem; font-weight: 800; color: var(--color-navy); margin-top: 0.5rem;">-</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "short_name": "AdminSD",
+  "name": "Sistem Informasi Administrasi & Pembelajaran SD",
+  "icons": [
+    { "src": "images/icon-192.png", "type": "image/png", "sizes": "192x192", "purpose": "any maskable" },
+    { "src": "images/icon-512.png", "type": "image/png", "sizes": "512x512", "purpose": "any maskable" }
+  ],
+  "start_url": "./index.html",
+  "background_color": "#1E3A8A",
+  "theme_color": "#1E3A8A",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "./",
+  "lang": "id"
+}
